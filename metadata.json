@@ -1,0 +1,6 @@
+{
+  "name": "Qween Fecy Fashion",
+  "description": "African-Canadian luxury fashion house bridging Toronto and Lagos. African heritage meets contemporary elegance, custom bespoke design, runway fashion, and inclusive styling.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

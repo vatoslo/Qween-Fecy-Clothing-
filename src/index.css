@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-display: 'Cinzel', 'Playfair Display', serif;
+  --font-cormorant: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  
+  --color-plum: #4B164C;
+  --color-aubergine: #29132D;
+  --color-terracotta: #A4513C;
+  --color-sand: #D8C2A3;
+  --color-gold-champagne: #D6B77C;
+  --color-gold-400: #D6B77C;
+  --color-gold-500: #C4A160;
+  --color-gold-600: #A88645;
+  --color-ivory: #F5EFE5;
+  --color-charcoal: #181417;
+  --color-charcoal-light: #262025;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-sans);
+    background-color: #F5EFE5;
+    color: #181417;
+    overflow-x: hidden;
+    letter-spacing: -0.01em;
+  }
+
+  h1, h2, h3, .font-serif-luxury {
+    font-family: var(--font-serif);
+    letter-spacing: -0.02em;
+  }
+
+  .font-brand-display {
+    font-family: var(--font-display);
+    letter-spacing: 0.22em;
+  }
+
+  .font-editorial {
+    font-family: var(--font-cormorant);
+    letter-spacing: -0.015em;
+  }
+}
+
+/* Custom smooth luxury scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #F5EFE5;
+}
+::-webkit-scrollbar-thumb {
+  background: #D6B77C;
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #A4513C;
+}
+
+/* Restrained luxury image zoom & smooth ease */
+.luxury-img-zoom {
+  transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.group:hover .luxury-img-zoom {
+  transform: scale(1.04);
+}
+
+/* Editorial hairline rules */
+.luxury-hairline {
+  background: linear-gradient(90deg, transparent, rgba(214, 183, 124, 0.4), transparent);
+}
+
+.luxury-hairline-dark {
+  background: linear-gradient(90deg, transparent, rgba(214, 183, 124, 0.6), transparent);
+}
+
+/* Subtle line expand animation on links */
+.luxury-link-underline {
+  position: relative;
+}
+.luxury-link-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0%;
+  height: 1px;
+  background-color: #D6B77C;
+  transition: width 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.luxury-link-underline:hover::after {
+  width: 100%;
+}
+
+
